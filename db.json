@@ -10,19 +10,19 @@
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": "74.74"
     },
     {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
-      "price": 5.99
+      "price": "10.00"
     },
     {
       "id": 4,
       "name": "Pothos",
       "image": "./images/pothos.jpg",
-      "price": 12.11
+      "price": "12.12"
     },
     {
       "id": 5,
@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Golden Barrel Cactus",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg6yAtT9f9dOrkiE9sk7JkSfaC-6Wv9X1HEFFXpmgd9A&s",
+      "price": "12.12",
+      "id": 8
     }
   ]
 }

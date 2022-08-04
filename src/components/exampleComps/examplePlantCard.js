@@ -1,11 +1,11 @@
-import React, {useState} from "react";
 
-function PlantCard({ plant, setRefresh } ) {
+import React, { useState } from "react";
 
-  const {id, name, image, price} = plant
+function PlantCard({ plant, setRefresh }) {
+  const { id, image, name, price } = plant
   const [isInStock, setIsInStock] = useState(true)
 
-  const toggleStock = () => {
+  const handleIsInStock = () => {
     setIsInStock((isInStock) => !isInStock)
   }
 
@@ -20,12 +20,13 @@ function PlantCard({ plant, setRefresh } ) {
   }
 
   const handlePriceClick = () => {
-    let answer = prompt("Enter new price:")
+    let answer = prompt("Enter New Price")
+
     fetch(`http://localhost:6001/plants/${id}`, {
       method: "PATCH",
       headers: {
-      "Content-Type": "application/json"
-    },
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         price: answer
       })
@@ -35,16 +36,15 @@ function PlantCard({ plant, setRefresh } ) {
 
   return (
     <li className="card">
-      <img src={ image } alt={ name } />
-      <h4>{ name }</h4>
-      <p onClick={handlePriceClick} >Price: { price } | click to update price</p>
+      <img src={image} alt={name} />
+      <h4>{name}</h4>
+      <p onClick={handlePriceClick} >Price: {price} Click to Modify </p>
       {isInStock ? (
-        <button onClick={toggleStock} className="primary">In Stock</button>
+        <button onClick={handleIsInStock} className="primary">In Stock</button>
       ) : (
-        <button onClick={toggleStock}>Sold Out</button>
+        <button onClick={handleIsInStock} >Out of Stock</button>
       )}
-        <br></br>
-        <button onClick={handleDeleteClick}>Delete</button>
+      <button onClick={handleDeleteClick}>Delete</button>
     </li>
   );
 }

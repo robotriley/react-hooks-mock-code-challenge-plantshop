@@ -21,11 +21,27 @@ button {
   font-family: inherit;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  padding: 0.25rem 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: slategray;
 }
 
 button.primary {
   background-color: var(--green);
   color: white;
+  border-radius: 5px;
+}
+
+button.primary:hover {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
 }
 
 .app {
